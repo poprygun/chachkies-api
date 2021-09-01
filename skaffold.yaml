@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta20
+kind: Config
+metadata:
+  name: chachkies-api
+build:
+  artifacts:
+  - image: chachkies-api
+    buildpacks:
+      builder: gcr.io/buildpacks/builder:v1
+deploy:
+  kubectl:
+    manifests:
+    - kubernetes/deployment.yaml
+    - kubernetes/service.yaml

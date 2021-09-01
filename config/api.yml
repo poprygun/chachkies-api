@@ -1,0 +1,70 @@
+openapi: 3.0.1
+info:
+  title: App Accelerator API
+  description: 'App Accelerator demo for OpenApi Projects'
+  termsOfService: https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/0.1/acc-docs/GUID-index.html
+  contact:
+    email: ashumilov@vmware.com
+  license:
+    name: Some Top Secret License
+    url: http://microsamples.io/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://microsamples.io/api/operators
+tags:
+  - name: chachkie
+    description: Chachkies
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /chachkies:
+    get:
+      tags:
+        - chachkie
+      summary: Find all chachkies
+      description: Returns All Chachkies
+      operationId: getChachkies
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Chachkie'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiException"
+components:
+  schemas:
+    Chachkie:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Object id
+        latitude:
+          type: number
+          description: Frequency Min
+        longitude:
+          type: number
+          description: Frequency Max
+    ApiException:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string

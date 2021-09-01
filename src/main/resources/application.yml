@@ -1,0 +1,17 @@
+springdoc.swagger-ui.path: /api/swagger-ui.html
+springdoc.packagesToScan: io.microsamples.accelerator.chachkies.api
+springdoc.swagger-ui.csrf.enabled: true
+springdoc.swagger-ui.enabled: true
+
+server.error.include-message: always
+
+management:
+  health:
+    readinessState:
+      enabled: true
+    livenessState:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
