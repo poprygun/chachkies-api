@@ -42,7 +42,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ApiException"
+                $ref: "#/components/schemas/ModelApiException"
 components:
   schemas:
     Chachkie:
@@ -57,7 +57,7 @@ components:
         longitude:
           type: number
           description: Frequency Max
-    ApiException:
+    ModelApiException:
       type: object
       required:
         - code

@@ -62,7 +62,6 @@ openApiGenerate {
 	outputDir.set(generatedSourcesDir)
 	inputSpec.set("${projectDir}/config/api.yml")
 	ignoreFileOverride.set("${projectDir}/.openapi-generator-ignore")
-	templateDir.set("${projectDir}/src/main/resources/templates")
 	configOptions.set(
 		mapOf(
 			"dateLibrary" to "java8",
