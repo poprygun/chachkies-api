@@ -17,14 +17,13 @@ accelerator:
       dataType: boolean
       defaultValue: false
 
-    - name: enableAppLiveView
-      label: App Live View
-      dependsOn:
-        name: includeKubernetes
-      description: Toggle "On" to enable Application Live View integration.
-      inputType: toggle
-      dataType: boolean
-      defaultValue: false
+    - name: artifactId
+      label: Artifact ID
+      description: Application Artifact Name
+      required: true
+      dataType: string
+      inputType: text
+      defaultValue: chachkies-api
 
 engine:
   merge:
