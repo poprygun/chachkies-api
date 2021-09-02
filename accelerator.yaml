@@ -40,12 +40,12 @@ engine:
           substitutions:
             - text: chachkies-api
               with: "#artifactId"
-    - include: [ "src/main/kotlin/**/Application.kt" ]
-      chain:
-        - type: ReplaceText
-          substitutions:
-            - text: "io.microsamples.accelerator.chachkies.api"
-              with: "#generatedApiFilesPackage + '.api'"
+#    - include: [ "src/main/kotlin/**/Application.kt" ]
+#      chain:
+#        - type: ReplaceText
+#          substitutions:
+#            - text: "io.microsamples.accelerator.chachkies.api"
+#              with: "#generatedApiFilesPackage + '.api'"
     - include: [ "build.gradle.kts", "src/main/resources/application.yml" ]
       chain:
         - type: ReplaceText
