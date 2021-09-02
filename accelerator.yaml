@@ -31,7 +31,6 @@ accelerator:
       inputType: text
       defaultValue: "Chachkie"
 
-
 engine:
   merge:
     - include: [ "**" ]
