@@ -48,3 +48,9 @@ engine:
               with: "#generatedApiFilesPackage"
             - text: Chachkie
               with: "#apiSuffix"
+    - include: ['src/main/kotlin/**/ChachkiesChachkieServiceImpl.kt']
+      chain:
+        - type: ReplaceText
+          substitutions:
+            - text: "import io.microsamples.accelerator.chachkies"
+              with: "import #generatedApiFilesPackage"
