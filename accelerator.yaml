@@ -54,3 +54,5 @@ engine:
           substitutions:
             - text: "import io.microsamples.accelerator.chachkies"
               with: "'import ' + #generatedApiFilesPackage"
+            - text: "ChachkiesChachkieService"
+              with: "'Chachkies' + #apiSuffix + 'Service'"
