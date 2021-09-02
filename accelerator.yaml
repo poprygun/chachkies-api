@@ -46,7 +46,7 @@ engine:
           substitutions:
             - text: "io.microsamples.accelerator.chachkies.api"
               with: "#generatedApiFilesPackage + '.api'"
-    - include: [ "build.gradle.kts", "src/main/resources/application.yml", "src/main/kotlin/**/Application.kt" ]
+    - include: [ "build.gradle.kts", "src/main/resources/application.yml" ]
       chain:
         - type: ReplaceText
           substitutions:
