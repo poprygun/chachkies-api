@@ -53,4 +53,4 @@ engine:
         - type: ReplaceText
           substitutions:
             - text: "import io.microsamples.accelerator.chachkies"
-              with: "#generatedApiFilesPackage"
+              with: "'import ' + #generatedApiFilesPackage"
