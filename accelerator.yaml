@@ -34,7 +34,7 @@ accelerator:
 engine:
   merge:
     - include: [ "**" ]
-    - include: [ "kubernetes/*.yaml", "skaffold.yaml", "settings.gradle.kts" ]
+    - include: [ "kubernetes/*.yaml", "skaffold.yaml", "settings.gradle.kts", "skaffold.yaml" ]
       chain:
         - type: ReplaceText
           substitutions:
