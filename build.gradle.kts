@@ -58,6 +58,7 @@ openApiGenerate {
 	groupId.set("io.microsamples.accelerator.chachkies")
 	apiPackage.set("io.microsamples.accelerator.chachkies.api")
 	modelPackage.set("io.microsamples.accelerator.chachkies.model")
+//	generateApiTests.set(true)
 	generateApiTests.set(false)
 	outputDir.set(generatedSourcesDir)
 	inputSpec.set("${projectDir}/config/api.yml")

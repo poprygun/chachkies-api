@@ -34,7 +34,7 @@ accelerator:
 engine:
   merge:
     - include: [ "**" ]
-    - include: [ "kubernetes/*.yaml", "skaffold.yaml", "settings.gradle.kts", "skaffold.yaml" ]
+    - include: [ "kubernetes/*.yaml", "skaffold.yaml", "settings.gradle.kts" ]
       chain:
         - type: ReplaceText
           substitutions:
@@ -54,7 +54,7 @@ engine:
               with: "#generatedApiFilesPackage"
             - text: Chachkie
               with: "#apiSuffix"
-    - include: [ "src/main/kotlin/**/ChachkiesApiServiceImpl.kt" ]
+    - include: [ "src/main/kotlin/**/ChachkiesApiServiceImpl.kt", "src/test/kotlin/**/ChachkiesChachkieTest.kt" ]
       chain:
         - type: ReplaceText
           substitutions:
